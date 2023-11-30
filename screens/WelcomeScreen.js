@@ -2,8 +2,11 @@ import {SafeAreaView, StatusBar } from 'react-native'
 import React from 'react'
 import { StyleSheet, View,Text, Image, Button, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function WelcomeScreen() {
+  const navigation = useNavigation();
   return (
     <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 0}} colors={['#54c0cc','#dcd964',]} style={{flex:1}}>
         <SafeAreaView style={styles.container}>
@@ -15,7 +18,7 @@ export default function WelcomeScreen() {
               </View>
               <View style={styles.bgButton}>
                 <View style={{backgroundColor:'#ffff', padding:10, borderRadius:50, width:200}}>
-                  <Button title='Tovább' color='#54c0cc' onPress={() => Alert.alert('Button pressed')}></Button>
+                  <Button title='Tovább' color='#54c0cc' onPress={() => navigation.navigate('Login')}></Button>
                 </View>
              
               <StatusBar style="auto" />
