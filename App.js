@@ -16,6 +16,8 @@ export default function App() {
           <Button title='Tovább' color='#54c0cc' onPress={() => Alert.alert('Button pressed')}></Button>
         </View>
       </View>
+      
+      <NavigationContainer></NavigationContainer>
       <StatusBar style="auto" />
       </LinearGradient>
     </View>
