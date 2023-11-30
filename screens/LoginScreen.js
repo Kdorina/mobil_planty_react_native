@@ -1,10 +1,11 @@
+/* rnf alapot adja meg */
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function HomeScreen() {
+export default function LoginScreen() {
   return (
     <View>
-      <Text>HomeScreen</Text>
+      <Text>LoginScreen</Text>
     </View>
   )
 }
