@@ -12,7 +12,7 @@ export default function LoginScreen() {
   <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 0}} colors={['#54c0cc','#dcd964',]} style={{flex:1}}>
     <SafeAreaView style={styles.container}>
     <Image source={require('../assets/leaf.png')} style={{marginBottom:-50, flex:1,justifyContent: 'center',width:100,resizeMode: 'contain'}}/>
-    <Text style={{fontSize:45, fontWeight:'bold',flex:1, margin:0}}>Bejelentekzés</Text>
+    <Text style={{fontSize:45, fontWeight:'bold',flex:1, margin:0}}>Bejelentkezés</Text>
       <View style={styles.loginBox}>
           <View style={styles.inputBox}>
             <Text style={styles.inputText}>Email cím</Text>
@@ -23,7 +23,7 @@ export default function LoginScreen() {
         
       </View>
       <View style={{flex:1}}>
-        <View style={{backgroundColor:'#ffff', padding:10, borderRadius:50, width:200}}>
+        <View style={{backgroundColor:'#ffff', padding:10, marginTop:30, borderRadius:50, width:200}}>
             <Button title='Bejelentkezés' color='#54c0cc' onPress={() => navigation.navigate('Home')}></Button>
         </View>
       </View>
