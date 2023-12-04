@@ -24,7 +24,7 @@ export default function LoginScreen() {
       </View>
       <View style={{flex:1}}>
         <View style={{backgroundColor:'#ffff', padding:10, marginTop:30, borderRadius:50, width:200}}>
-            <Button title='Bejelentkezés' color='#54c0cc' onPress={() => navigation.navigate('Home')}></Button>
+            <Button title='Bejelentkezés' color='#54c0cc' onPress={() => navigation.navigate('Temp')}></Button>
         </View>
       </View>
       <StatusBar style="auto" />

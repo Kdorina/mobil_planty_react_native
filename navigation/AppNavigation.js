@@ -6,6 +6,7 @@ import HomeScreen from "../screens/HomeScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import LoginScreen from '../screens/LoginScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
+import TemporaryScreen from '../screens/TemporaryScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ const AppNavigation = () => {
           <Stack.Navigator initialRouteName='Login'>
             <Stack.Screen name="Welcome" options={{headerShown:false}} component={WelcomeScreen} />
             <Stack.Screen name="Home" options={{headerShown:false}} component={HomeScreen} />
+            <Stack.Screen name="Temp" options={{headerShown:false}} component={TemporaryScreen} />
             <Stack.Screen name="Register" options={{headerShown:false}} component={RegisterScreen} />
             <Stack.Screen name="Login" options={{headerShown:false}} component={LoginScreen} />
            
