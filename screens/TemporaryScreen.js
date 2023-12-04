@@ -34,7 +34,7 @@ export default function TemporaryScreen() {
             <Text style={{fontSize:25}}>Üdvözölünk a planty csapatában.</Text>
             </View>
        
-        <Text style={{fontSize:20, marginTop:30, padding:20}}>Kérlek válaszd ki növényedet!</Text>
+        <Text style={{fontSize:20, marginTop:30, padding:20, fontWeight:500}}>Kérlek válaszd ki növényedet!</Text>
         
         <View style={{width:350, height:400, justifyContent:'center', alignItems:'center', 
         borderRadius:20, backgroundColor:"green", overflow:'hidden'}}>

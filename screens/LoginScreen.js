@@ -4,14 +4,15 @@ import { StyleSheet, View, Text, StatusBar } from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
+import { Linking } from 'react-native';
 /* import { useFonts } from 'react-native-google-fonts'; */
 
 export default function LoginScreen() {
   const navigation = useNavigation();
   return (
-  <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 0}} colors={['#54c0cc','#dcd964',]} style={{flex:1}}>
+  <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 0}} colors={['#f9c2ff','#dcd964',]} style={{flex:1}}>
     <SafeAreaView style={styles.container}>
-    <Image source={require('../assets/leaf.png')} style={{marginBottom:-50, flex:1,justifyContent: 'center',width:100,resizeMode: 'contain'}}/>
+    <Image source={require('../assets/leaf.png')} style={{marginBottom:-60, flex:1,justifyContent: 'center',width:100,resizeMode:'contain'}}/>
     <Text style={{fontSize:45, fontWeight:'bold',flex:1, margin:0}}>Bejelentkezés</Text>
       <View style={styles.loginBox}>
           <View style={styles.inputBox}>
@@ -22,11 +23,15 @@ export default function LoginScreen() {
           </View>
         
       </View>
-      <View style={{flex:1}}>
-        <View style={{backgroundColor:'#ffff', padding:10, marginTop:30, borderRadius:50, width:200}}>
+      <View style={{flex:1, alignItems:'center'}}>
+        <View style={{backgroundColor:'#ffff', padding:10, marginTop:0, borderRadius:50, width:200}}>
             <Button title='Bejelentkezés' color='#54c0cc' onPress={() => navigation.navigate('Temp')}></Button>
         </View>
+        <View  style={{marginTop:20}}>
+          <Button title='Nincs még fiókod? Regisztrálj itt.' onPress={()=> navigation.navigate('Register')}></Button>
+        </View>
       </View>
+
       <StatusBar style="auto" />
     </SafeAreaView>
   </LinearGradient>
@@ -45,7 +50,7 @@ const styles = StyleSheet.create({
     height:350,
     borderRadius:30,
     alignItems: 'center',
-    marginTop:-200,
+    marginTop:-250,
   },
   inputBox:{
     flex:1,
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
   },
   inputText:{
     marginBottom:10,
-    marginTop:30,
+    marginTop:20,
     fontSize:20,
     fontFamily:'Nunito-Regular'
   },
