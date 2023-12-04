@@ -17,8 +17,10 @@ const Plants = [
   ];
 
   const Item = ({title}) => (
+    <View style={{ justifyContent:'center'}}>
     <View style={styles.item}>
       <Text style={styles.title}>{title}</Text>
+    </View>
     </View>
   );
 
@@ -26,13 +28,14 @@ const Plants = [
 export default function TemporaryScreen() {
   return (
     <SafeAreaView style={{flex:1, justifyContent:'center', alignItems:'center',}}>
-        <View style={{flex:1, justifyContent:'center', alignItems:'center',}}>
+        <View style={{justifyContent:'center', alignItems:'center',}}>
         <Text style={{}}>Szia Alma! Üdvözölünk a planty csapatában</Text>
         <Text>Kérlek válaszd ki növényedet</Text>
         
-        <View style={{width:350, height:400, justifyContent:'center', alignItems:'center', borderRadius:20, backgroundColor:"green"}}>
+        <View style={{width:350, height:400, justifyContent:'center', alignItems:'center', 
+        borderRadius:20, backgroundColor:"green", overflow:'hidden'}}>
           
-            <FlatList 
+            <FlatList
             data={Plants}
             renderItem={({item}) => <Item title={item.title} />}
             keyExtractor={item => item.id}  horizontal={true} 
@@ -57,6 +60,8 @@ const styles = StyleSheet.create({
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
+        height:250,
+        borderRadius:10,
        
       },
       title: {
