@@ -29,8 +29,12 @@ export default function TemporaryScreen() {
   return (
     <SafeAreaView style={{flex:1, justifyContent:'center', alignItems:'center',}}>
         <View style={{justifyContent:'center', alignItems:'center',}}>
-        <Text style={{}}>Szia Alma! Üdvözölünk a planty csapatában</Text>
-        <Text>Kérlek válaszd ki növényedet</Text>
+            <View style={{marginTop:-100}}>
+            <Text style={{fontSize:30,fontWeight:'bold'}}>Szia Alma!</Text>
+            <Text style={{fontSize:25}}>Üdvözölünk a planty csapatában.</Text>
+            </View>
+       
+        <Text style={{fontSize:20, marginTop:30, padding:20}}>Kérlek válaszd ki növényedet!</Text>
         
         <View style={{width:350, height:400, justifyContent:'center', alignItems:'center', 
         borderRadius:20, backgroundColor:"green", overflow:'hidden'}}>
