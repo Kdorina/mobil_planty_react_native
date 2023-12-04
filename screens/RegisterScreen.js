@@ -13,18 +13,21 @@ export default function RegisterScreen() {
         <View style={styles.loginBox}>
             <View style={styles.inputBox}>
               <Text style={styles.inputText}>Felhasználónév</Text>
-              <TextInput style={styles.input}></TextInput>
+              <TextInput placeholder="Felhasználó név" style={styles.input}></TextInput>
               <Text style={styles.inputText}>Email cím</Text>
-              <TextInput style={styles.input}></TextInput>
+              <TextInput placeholder="Email" style={styles.input}></TextInput>
               <Text style={styles.inputText}>Jelszó</Text>
-              <TextInput style={styles.input}></TextInput>
+              <TextInput placeholder="Jelszó" style={styles.input}></TextInput>
             </View>
           
         </View>
-        <View style={{flex:1}}>
+        <View style={{flex:1, alignItems:'center'}}>
           <View style={{backgroundColor:'#ffff', padding:10, marginTop:50, borderRadius:50, width:200}}>
-              <Button title='Tovább' color='#54c0cc' onPress={() => navigation.navigate('Login')}></Button>
+              <Button title='Regisztráció' color='#54c0cc' onPress={() => navigation.navigate('Login')}></Button>
           </View>
+          <View  style={{marginTop:20 , fontWeight:'bold'}}>
+          <Button title='Van már fiókod? Jelentkezz be itt.' color='#01c0cc' onPress={()=> navigation.navigate('Login')}></Button>
+        </View>
         </View>
         <StatusBar style="auto" />
       </SafeAreaView>
@@ -54,7 +57,8 @@ export default function RegisterScreen() {
       marginBottom:10,
       marginTop:20,
       fontSize:20,
-      fontFamily:'Nunito-Regular'
+      fontWeight:'500',
+
     },
     input:{
       backgroundColor:"white",

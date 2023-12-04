@@ -17,18 +17,18 @@ export default function LoginScreen() {
       <View style={styles.loginBox}>
           <View style={styles.inputBox}>
             <Text style={styles.inputText}>Email cím</Text>
-            <TextInput style={styles.input}></TextInput>
+            <TextInput placeholder="Email" style={styles.input}></TextInput>
             <Text style={styles.inputText}>Jelszó</Text>
-            <TextInput style={styles.input}></TextInput>
+            <TextInput placeholder="Jelszó" style={styles.input}></TextInput>
           </View>
         
       </View>
       <View style={{flex:1, alignItems:'center'}}>
         <View style={{backgroundColor:'#ffff', padding:10, marginTop:0, borderRadius:50, width:200}}>
-            <Button title='Bejelentkezés' color='#54c0cc' onPress={() => navigation.navigate('Temp')}></Button>
+            <Button title='Bejelentkezés' color='#01c0cc' onPress={() => navigation.navigate('Temp')}></Button>
         </View>
-        <View  style={{marginTop:20}}>
-          <Button title='Nincs még fiókod? Regisztrálj itt.' onPress={()=> navigation.navigate('Register')}></Button>
+        <View  style={{marginTop:20 , fontWeight:'bold'}}>
+          <Button title='Nincs még fiókod? Regisztrálj itt.' color='#01c0cc' onPress={()=> navigation.navigate('Register')}></Button>
         </View>
       </View>
 
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     marginBottom:10,
     marginTop:20,
     fontSize:20,
-    fontFamily:'Nunito-Regular'
   },
   input:{
     backgroundColor:"white",
