@@ -1,5 +1,6 @@
-import { StyleSheet, View, Text, StatusBar, SafeAreaView, FlatList, ScrollView } from 'react-native'
+import { StyleSheet, View, Text, StatusBar, SafeAreaView, FlatList, ScrollView, Button } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 
 const Plants = [
     {
@@ -26,6 +27,7 @@ const Plants = [
 
   
 export default function TemporaryScreen() {
+    const navigation = useNavigation();
   return (
     <SafeAreaView style={{flex:1, justifyContent:'center', alignItems:'center',}}>
         <View style={{justifyContent:'center', alignItems:'center',}}>
@@ -46,6 +48,7 @@ export default function TemporaryScreen() {
             />
 
         </View>
+        <Button title='Tovább' onPress={()=>navigation.navigate('Home')}></Button>
         <StatusBar style="auto" />
         </View>
     </SafeAreaView>
@@ -53,12 +56,12 @@ export default function TemporaryScreen() {
 }
 
 const styles = StyleSheet.create({
-    container: {
+   /*  container: {
       flex:1,
       width:'100%',
       alignItems: 'center', 
       justifyContent: 'center',
-    },
+    }, */
     item: {
         backgroundColor: '#f9c2ff',
         padding: 20,
