@@ -1,7 +1,9 @@
-import {StyleSheet, View, Text, StatusBar, Button, SafeAreaView, FlatList } from 'react-native'
+import {StyleSheet, View, Text, StatusBar, Button, SafeAreaView, FlatList, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { Header } from 'react-native/Libraries/NewAppScreen';
+import BottomNavigation from '../navigation/BottomNavigation';
+
 
 const Plants = [
     {
@@ -32,6 +34,9 @@ const ToDo = [
   const Item = ({title}) => (
     <View style={{ justifyContent:'center'}}>
     <View style={styles.item}>
+      <View style={{ height:'150%', position:'absolute',marginVertical:-40, marginHorizontal:20}}>
+      <Image source={require('../assets/plant.png')} style={{flex:1,width:190,resizeMode:'cover'}}/>
+      </View>
       <Text style={styles.title}>{title}</Text>
     </View>
     </View>
@@ -55,7 +60,6 @@ export default function HomeScreen() {
       <Button title='profile' color='black'></Button></View>
         <View style={{width:400, height:250, 
           borderRadius:20, overflow:'hidden'}}>
-            
               <FlatList
               data={Plants}
               renderItem={({item}) => <Item title={item.title} />}
@@ -65,7 +69,7 @@ export default function HomeScreen() {
         </View>
         <View style={{alignItems:'center',justifyContent:'center'}}>
          {/*  <Text style={{fontSize:40, fontWeight:'bold'}}>ToDO</Text> */}
-          <View style={{backgroundColor:"green" ,width:350, height:250, borderRadius:20 }}>
+          <View style={{backgroundColor:"#D0F288" ,width:350, height:250, borderRadius:20 }}>
             <FlatList data={ToDo} 
             renderItem={({item}) => <List title={item.title}/>}
             vertical={true}/>
@@ -78,6 +82,8 @@ export default function HomeScreen() {
       <Button title='back' onPress={()=> navigation.navigate('Login')}></Button>
       <StatusBar style="auto" />
     </View>
+
+    <BottomNavigation/>
     </SafeAreaView>
   )
 }
@@ -90,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   item: {
-      backgroundColor: 'green',
+      backgroundColor: '#D0F288',
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,
