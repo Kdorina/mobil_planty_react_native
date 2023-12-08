@@ -1,11 +1,14 @@
 import { View, Text, SafeAreaView, Button, Image } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
+
 export default function PlantScreen() {
+    const navigation = useNavigation(); 
   return (
     <SafeAreaView style={{flex:1,backgroundColor:'#D0F288' , width:'100%', alignItems:'center'}}>
         <View>
-        <Button title='< My plants'></Button>
+        <Button title='<My plants' onPress={()=> navigation.navigate('Home')}></Button>
         <Text style={{margin:20,fontSize:60, fontWeight:'bold', color:'#F8FFD2', marginBottom:-30}}>Fikusz</Text>
         <View style={{flexDirection:'row',zIndex:2, width:'100%', justifyContent:'space-around', marginTop:20}}>
             <View style={{width:120, height:400,marginVertical:30, borderRadius:20}}>
