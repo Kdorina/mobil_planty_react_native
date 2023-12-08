@@ -57,7 +57,7 @@ export default function HomeScreen() {
     <View style={{flex:1}}>
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
-      <Button title='profile' color='black'></Button></View>
+      <Button title='profile' color='black' onPress={()=> navigation.navigate('Profile')}></Button></View>
         <View style={{width:400, height:250, 
           borderRadius:20, overflow:'hidden'}}>
               <FlatList
@@ -79,7 +79,7 @@ export default function HomeScreen() {
         <View>
           
         </View>
-      <Button title='back' onPress={()=> navigation.navigate('Login')}></Button>
+      <Button title='plant' onPress={()=> navigation.navigate('Plants')}></Button>
       <StatusBar style="auto" />
     </View>
 
