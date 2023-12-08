@@ -6,27 +6,27 @@ import { Header } from 'react-native/Libraries/NewAppScreen';
 const Plants = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First plant',
+      title: 'Data',
     },
     {
       id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second plant',
+      title: 'Data',
     },
     {
       id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third plant',
+      title: 'Data',
     },
   ];
 
 const ToDo = [
   {
-    title: 'Megontozni Egont',
+    title: 'data',
   },
   {
-    title: 'Interjuzni',
+    title: 'data',
   },
   {
-    title: 'Megirni a progit',
+    title: 'data',
   },
 ]
   const Item = ({title}) => (
@@ -50,7 +50,9 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
     <View style={{flex:1}}>
+      <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
+      <Button title='profile' color='black'></Button></View>
         <View style={{width:400, height:250, 
           borderRadius:20, overflow:'hidden'}}>
             
@@ -67,6 +69,7 @@ export default function HomeScreen() {
             <FlatList data={ToDo} 
             renderItem={({item}) => <List title={item.title}/>}
             vertical={true}/>
+            
           </View>
         </View>
         <View>
