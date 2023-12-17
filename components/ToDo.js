@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         marginBottom: 20,
+        
     },
     itemLeft:{
         flexDirection: 'row',
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     square:{
         width: 24,
         height: 24,
-        backgroundColor: '#55bcf6',
+        backgroundColor: '#D0F118',
         opacity: 0.4,
         borderRadius: 5,
         marginRight: 15,

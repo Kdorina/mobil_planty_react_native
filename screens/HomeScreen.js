@@ -55,7 +55,12 @@ export default function HomeScreen() {
     <View style={{flex:1}}>
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
-      <Button title='profile' color='black' onPress={()=> navigation.navigate('Profile')}></Button></View>
+      <TouchableOpacity onPress={()=> navigation.navigate('Profile')}>
+        <View style={{backgroundColor:'#FFC107',borderRadius:'50%'}}>
+        <Text style={{width:60,height:60}}></Text>
+        </View>
+      </TouchableOpacity>
+      </View>
         <View style={{width:400, height:250, 
           borderRadius:20, overflow:'hidden'}}>
               <FlatList
@@ -66,11 +71,13 @@ export default function HomeScreen() {
 
         </View>
 
-         <ScrollView contentContainer={{ flexGrow: 1}}
+        {/* todo lista */}
+          <Text style={styles.sectionTitle}>ToDo listám</Text>
+         <ScrollView style={{backgroundColor:'#D0F288', borderRadius:20}} contentContainer={{ flexGrow: 1}} 
           keyboardTaps='handle'>
 
             <View style={styles.tasksWrapper}>
-              <Text style={styles.sectionTitle}>ToDo listám</Text>
+             
               <View style={styles.items}>
                 {
                   taskItems.map((item, index)=>{
@@ -133,17 +140,16 @@ const styles = StyleSheet.create({
     },
   
     sectionTitle:{
-      fontSize: 24,
+      fontSize: 30,
       fontWeight: 'bold',
+      marginBottom:10,
     },
     items:{
       marginTop: 30, 
       
     },
     writeListWrapper:{
-      position: 'absolute',
-      bottom: 60,
-      width: '100%',
+      bottom: 80,
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignItems: 'center',
@@ -165,13 +171,9 @@ const styles = StyleSheet.create({
       width:60,
       height: 60,
       borderRadius:60,
-      // borderRadius: 20,
       backgroundColor: '#FFC107',
       justifyContent: 'center',
       alignItems:'center',
-      borderColor: '#c0c0c0',
-      borderWidth: 1,
-      
     },
     addText:{
     }
