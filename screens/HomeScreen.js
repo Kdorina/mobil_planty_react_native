@@ -19,18 +19,7 @@ const Plants = [
       title: 'Data',
     },
   ];
-/* 
-const ToDo = [
-  {
-    title: 'data',
-  },
-  {
-    title: 'data',
-  },
-  {
-    title: 'data',
-  },
-]; */
+
   const Item = ({title}) => (
     <View style={{ justifyContent:'center'}}>
     <View style={styles.item}>
@@ -41,14 +30,6 @@ const ToDo = [
     </View>
     </View>
   );
-/* 
-  const List = ({title}) => (
-    <View style={{height:80,justifyContent:'center'}}>
-    <View style={styles.list}>
-      <Text style={styles.title2}>{title}</Text>
-    </View>
-    </View>
-  ); */
 
 export default function HomeScreen() {
 
@@ -84,46 +65,37 @@ export default function HomeScreen() {
               />
 
         </View>
-      {/*   <View style={{alignItems:'center',justifyContent:'center'}}>
-          <View style={{backgroundColor:"#D0F288" ,width:350, height:250, borderRadius:20 }}>
-            <FlatList data={ToDo} 
-            renderItem={({item}) => <List title={item.title}/>}
-            vertical={true}/>
-            
-          </View>
-        </View> */}
+
          <ScrollView contentContainer={{ flexGrow: 1}}
           keyboardTaps='handle'>
 
-          <View style={styles.tasksWrapper}>
-            <Text style={styles.sectionTitle}>ToDo listám</Text>
-            <View style={styles.items}>
-              {/* this is where the tasks will go */}
-              {
-                taskItems.map((item, index)=>{
-                  return (
-                    <TouchableOpacity  key={index}  onPress={() => completeTask(index)}>
-                    <ToDo text={item} />
-                    </TouchableOpacity>
-                  )
-                })
-              }
+            <View style={styles.tasksWrapper}>
+              <Text style={styles.sectionTitle}>ToDo listám</Text>
+              <View style={styles.items}>
+                {
+                  taskItems.map((item, index)=>{
+                    return (
+                      <TouchableOpacity  key={index}  onPress={() => completeTask(index)}>
+                      <ToDo text={item} />
+                      </TouchableOpacity>
+                    )
+                  })
+                }
+              </View>
             </View>
-          </View>
 
           </ScrollView>
-              <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"}
-        style={styles.writeListWrapper}>
-          <TextInput style={styles.input} placeholder={'Teendőim...'} value={task} onChangeText={text =>setTask(text)} />
-          <TouchableOpacity onPress={() => handleAddTask()}>
-            <View style={styles.addWrapper}>
-              <Text style={styles.addText}>+</Text>
-            </View>
-          </TouchableOpacity>
-        </KeyboardAvoidingView>
-        <View>
-          
-        </View>
+
+          <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"}
+            style={styles.writeListWrapper}>
+              <TextInput style={styles.input} placeholder={'Teendőim...'} value={task} onChangeText={text =>setTask(text)} />
+              <TouchableOpacity onPress={() => handleAddTask()}>
+                <View style={styles.addWrapper}>
+                  <Text style={styles.addText}>+</Text>
+                </View>
+              </TouchableOpacity>
+          </KeyboardAvoidingView>
+
       <Button title='plant' onPress={()=> navigation.navigate('Plants')}></Button>
       <StatusBar style="auto" />
     </View>
@@ -150,23 +122,14 @@ const styles = StyleSheet.create({
       borderRadius:20,
      
     },
-    list:{
-      padding:15,
-      backgroundColor:'white',
-      borderRadius:30,
-      marginHorizontal:10
-    },
+
     title: {
       fontSize: 32,
     },
-    title2: {
-      fontSize: 20,
 
-    },
     tasksWrapper:{
-      paddingTop: 80,
+      paddingTop: 0,
       paddingHorizontal: 20,
-      maxHeight:200
     },
   
     sectionTitle:{
@@ -174,7 +137,8 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
     items:{
-      marginTop: 30
+      marginTop: 30, 
+      
     },
     writeListWrapper:{
       position: 'absolute',
@@ -182,7 +146,8 @@ const styles = StyleSheet.create({
       width: '100%',
       flexDirection: 'row',
       justifyContent: 'space-around',
-      alignItems: 'center'
+      alignItems: 'center',
+      
     },
   
     input:{
