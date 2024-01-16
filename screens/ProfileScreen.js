@@ -59,6 +59,7 @@ export default function ProfileScreen() {
           </View>
       </View>
       <View style={{alignItems:'center', marginTop:30}}>
+      <Text style={{color:'white', fontSize:15}}  onPress={()=> navigation.navigate('Login')}>Fiók törlése</Text>
       <Text style={{color:'#D0F288', fontSize:20}}  onPress={()=> navigation.navigate('Login')}>Kijelentkezés</Text>
       </View>
       
