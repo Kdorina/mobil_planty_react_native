@@ -17,7 +17,7 @@ import {
     backgroundGradientFromOpacity: 0,
     backgroundGradientTo: "#08130D",
     backgroundGradientToOpacity: 0,
-    color: (opacity = 1) => `rgba(36, 79, 40, ${opacity})`,
+    color: (opacity = 1) => `rgba(255, 121, 25, ${opacity})`,
     strokeWidth: 1, // optional, default 3
     barPercentage: 0.5,
     useShadowColorFromDataset: false // optional
@@ -41,10 +41,10 @@ export default function PlantScreen() {
 
   return (
         /* #1E2923 ez a szín jólnézne ki hátttérnek */
-    <SafeAreaView style={{flex:1,backgroundColor:'#D0F288' , width:'100%', alignItems:'center'}}>
+    <SafeAreaView style={{flex:1,backgroundColor:'#a9e048' , width:'100%', alignItems:'center'}}>
         <View>
         <Button title='<My plants' onPress={()=> navigation.navigate('Home')}></Button>
-        <Text style={{margin:20,fontSize:60, fontWeight:'bold', color:'#F8FFD2', marginBottom:-30}}>Fikusz</Text>
+        <Text style={{margin:20,fontSize:60, fontWeight:'bold', color:'#DBFFAD', marginBottom:-30}}>Fikusz</Text>
         <View style={{flexDirection:'row',zIndex:2, width:'100%', justifyContent:'space-around', marginTop:20}}>
             <View style={{width:120, height:400,marginVertical:30, borderRadius:20}}>
                 <View style={{ height:'120%', width:'120%', position:'absolute'}}>
@@ -53,7 +53,7 @@ export default function PlantScreen() {
             </View>
          
             <View style={{marginLeft:120,width:200, height:400, justifyContent:'center', alignItems:'center'}}>
-                <View style={{backgroundColor:'#F8FFD2', width:130, height:100,margin:10, borderRadius:20}}>
+                <View style={{backgroundColor:'#DBFFAD', width:130, height:100,margin:10, borderRadius:20}}>
                 <ProgressChart style={{marginHorizontal:-120, marginVertical:-10}}
                 data={water}
                 width={screenWidth}
@@ -64,7 +64,7 @@ export default function PlantScreen() {
                 hideLegend={false}
                 />
                 </View>
-                <View style={{backgroundColor:'#F8FFD2', width:130, height:100,margin:10, borderRadius:20}}>
+                <View style={{backgroundColor:'#DBFFAD', width:130, height:100,margin:10, borderRadius:20}}>
                 <ProgressChart style={{marginHorizontal:-120, marginVertical:-10}}
                 data={nutirent}
                 width={screenWidth}
@@ -75,7 +75,7 @@ export default function PlantScreen() {
                 hideLegend={false}
                 />
                 </View>
-                <View style={{backgroundColor:'#F8FFD2', width:130, height:100,margin:10, borderRadius:20}}>
+                <View style={{backgroundColor:'#DBFFAD', width:130, height:100,margin:10, borderRadius:20}}>
                 <ProgressChart style={{marginHorizontal:-120, marginVertical:-10}}
                 data={light}
                 width={screenWidth}

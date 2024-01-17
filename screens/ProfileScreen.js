@@ -10,24 +10,24 @@ export default function ProfileScreen() {
     <View style={styles.profileBox}>
       <Text style={styles.mainText} >Profil</Text>
       <TouchableOpacity onPress={()=> navigation.navigate('')}>
-        <View style={{backgroundColor:'darkgreen',borderRadius:'50%'}}>
+        <View style={{backgroundColor:'grey',borderRadius:'50%'}}>
         <Text style={{width:100,height:100}}></Text>
         </View>
       </TouchableOpacity>
 
       <View style={styles.optionsHolder}>
       <TouchableOpacity onPress={()=> navigation.navigate('')}>
-        <View style={{backgroundColor:'darkgreen',borderRadius:'50%',margin:10}}>
+        <View style={{backgroundColor:'#ff7919',borderRadius:'50%',margin:10}}>
         <Text style={{width:70,height:70}}></Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=> navigation.navigate('')}>
-        <View style={{backgroundColor:'darkgreen',borderRadius:'50%',margin:10}}>
+        <View style={{backgroundColor:'#ff7919',borderRadius:'50%',margin:10}}>
         <Text style={{width:70,height:70}}></Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=> navigation.navigate('')}>
-        <View style={{backgroundColor:'darkgreen',borderRadius:'50%',margin:10}}>
+        <View style={{backgroundColor:'#ff7919',borderRadius:'50%',margin:10}}>
         <Text style={{width:70,height:70,}}></Text>
         </View>
       </TouchableOpacity>
@@ -37,30 +37,30 @@ export default function ProfileScreen() {
 
     <View style={styles.profileDatas}>
           <Text style={styles.dataText}>Név</Text>
-          <Text style={styles.datas}>Kovács Piroska</Text>
+          <View style={styles.datas}><Text style={{fontSize:20,}}>Kovács Piroska</Text></View>
           <Text style={styles.dataText}>Email</Text>
-          <Text style={styles.datas}>pirimiri@gmail.com</Text>
+          <View style={styles.datas}><Text style={{fontSize:20,}}>primiri@gmail.com</Text></View>
           <Text style={styles.dataText}>Növényeid száma: 3</Text>
 
       <View >
-          <View style={{flexDirection:"row", alignItems:'center', backgroundColor:"#D0F288", borderRadius:10, marginBottom:10}}>
-            <View style={{backgroundColor:'darkgreen',borderRadius:'10%',margin:10,width:40,height:40}}></View>
+          <View style={{flexDirection:"row", alignItems:'center', backgroundColor:"#DBFFAD", borderRadius:10, marginBottom:10}}>
+            <View style={{backgroundColor:'#a9e048',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
 
-          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#D0F288", borderRadius:10, marginBottom:10}}>
-             <View style={{backgroundColor:'darkgreen',borderRadius:'10%',margin:10,width:40,height:40}}></View>
+          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#DBFFAD", borderRadius:10, marginBottom:10}}>
+             <View style={{backgroundColor:'#a9e048',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
 
-          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#D0F288", borderRadius:10, marginBottom:10}}>
-            <View style={{backgroundColor:'darkgreen',borderRadius:'10%',margin:10,width:40,height:40}}></View>
+          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#DBFFAD", borderRadius:10, marginBottom:10}}>
+            <View style={{backgroundColor:'#a9e048',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
       </View>
       <View style={{alignItems:'center', marginTop:30}}>
-      <Text style={{color:'white', fontSize:15}}  onPress={()=> navigation.navigate('Login')}>Fiók törlése</Text>
-      <Text style={{color:'#D0F288', fontSize:20}}  onPress={()=> navigation.navigate('Login')}>Kijelentkezés</Text>
+      <Text style={{color:'red', fontSize:15}}  onPress={()=> navigation.navigate('Login')}>Fiók törlése</Text>
+      <Text style={{color:'grey', fontSize:20}}  onPress={()=> navigation.navigate('Login')}>Kijelentkezés</Text>
       </View>
       
     </View>
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     width:'100%',
     height:'100%',
     alignItems: 'center',
+    backgroundColor:'white',
   /*   justifyContent: 'center', */
   },
   profileBox:{
@@ -92,8 +93,8 @@ const styles = StyleSheet.create({
   profileDatas:{
     marginTop:20,
     padding:10,
-    backgroundColor:'darkgreen',
-    height:'50%',
+    backgroundColor:'white',
+    height:'55%',
     width:'80%',
     borderRadius:20,
   },
@@ -103,8 +104,9 @@ const styles = StyleSheet.create({
    
   },
   datas:{
-    fontSize:20,
-    backgroundColor:"#D0F288",
+    backgroundColor:"#DBFFAD",
+    borderRadius:5,
+    padding:5,
   },
 
 });

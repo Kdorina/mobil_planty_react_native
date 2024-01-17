@@ -56,7 +56,7 @@ export default function HomeScreen() {
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
       <TouchableOpacity onPress={()=> navigation.navigate('Profile')}>
-        <View style={{backgroundColor:'#FFC107',borderRadius:'50%'}}>
+        <View style={{backgroundColor:'#a9e048',borderRadius:'50%'}}>
         <Text style={{width:60,height:60}}></Text>
         </View>
       </TouchableOpacity>
@@ -73,7 +73,7 @@ export default function HomeScreen() {
 
         {/* todo lista */}
           <Text style={styles.sectionTitle}>ToDo listám</Text>
-         <ScrollView style={{backgroundColor:'#D0F288', borderRadius:20}} contentContainer={{ flexGrow: 1}} 
+         <ScrollView style={{backgroundColor:'#ff7919', borderRadius:20}} contentContainer={{ flexGrow: 1}} 
           keyboardTaps='handle'>
 
             <View style={styles.tasksWrapper}>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   item: {
-      backgroundColor: '#D0F288',
+      backgroundColor: '#ff7919',
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
 
     title: {
       fontSize: 32,
+      
     },
 
     tasksWrapper:{
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
       width:60,
       height: 60,
       borderRadius:60,
-      backgroundColor: '#FFC107',
+      backgroundColor: '#a9e048',
       justifyContent: 'center',
       alignItems:'center',
     },

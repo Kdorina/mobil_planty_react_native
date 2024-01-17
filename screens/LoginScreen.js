@@ -10,7 +10,7 @@ import { Linking } from 'react-native';
 export default function LoginScreen() {
   const navigation = useNavigation();
   return (
-  <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 0}} colors={['#f9c2ff','#dcd964',]} style={{flex:1}}>
+  <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 0}} colors={['#ff7919','#DBFFAD',]} style={{flex:1}}>
     <SafeAreaView style={styles.container}>
     <Image source={require('../assets/leaf.png')} style={{marginBottom:-60, flex:1,justifyContent: 'center',width:100,resizeMode:'contain'}}/>
     <Text style={{fontSize:45, fontWeight:'bold',flex:1, margin:0}}>Bejelentkezés</Text>
