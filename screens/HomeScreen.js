@@ -103,7 +103,7 @@ export default function HomeScreen() {
               </TouchableOpacity>
           </KeyboardAvoidingView>
 
-      <Button title='plant' onPress={()=> navigation.navigate('Plants')}></Button>
+    {/*   <Button title='plant' onPress={()=> navigation.navigate('Plants')}></Button> */}
       <StatusBar style="auto" />
     </View>
 
