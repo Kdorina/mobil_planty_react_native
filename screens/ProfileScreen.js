@@ -101,13 +101,13 @@ const styles = StyleSheet.create({
   /*   justifyContent: 'center', */
   },
   profileBox:{
-    marginTop:20,
+    marginBottom:30,
     alignItems: 'center',
   },
   mainText:{
     marginBottom:20,
     fontWeight:"bold",
-    fontSize:25,
+    fontSize:35,
   },
 
 });
