@@ -56,7 +56,7 @@ export default function HomeScreen() {
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
       <TouchableOpacity onPress={()=> navigation.navigate('Profile')}>
-        <View style={{backgroundColor:'#a9e048',borderRadius:'50%'}}>
+        <View style={{backgroundColor:'#FFCF81',borderRadius:'50%'}}>
         <Text style={{width:60,height:60}}></Text>
         </View>
       </TouchableOpacity>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   item: {
-      backgroundColor: '#ff7919',
+      backgroundColor: '#D9EDBF',
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,
