@@ -5,7 +5,7 @@
 > Applikáció IOS rendszerre lett tervezve.
 
 > Projekt megtekintésének lépései
-> ```
+ ```
 git clone {url}
 megnyitás VS code-ban
 npm install
