@@ -39,7 +39,7 @@ export default function TemporaryScreen() {
         <Text style={{fontSize:20, marginTop:30, padding:20, fontWeight:500}}>Kérlek válaszd ki növényedet!</Text>
         
         <View style={{width:350, height:400, justifyContent:'center', alignItems:'center', 
-        borderRadius:20, backgroundColor:"#ff7919", overflow:'hidden'}}>
+        borderRadius:20, backgroundColor:"#FFCF81", overflow:'hidden'}}>
           
             <FlatList
             data={Plants}
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     }, */
     item: {
-        backgroundColor: '#DBFFAD',
+        backgroundColor: '#D9EDBF',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
