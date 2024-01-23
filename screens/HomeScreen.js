@@ -38,7 +38,7 @@ export default function HomeScreen() {
   const navigation = useNavigation()
   return (
     <SafeAreaView style={styles.container}>
-    <View style={{flex:1}}>
+    <View style={{flex:1, marginTop:30}}>
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
       <TouchableOpacity onPress={()=> navigation.navigate('Profile')}>
