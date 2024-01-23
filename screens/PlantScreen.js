@@ -42,17 +42,22 @@ export default function PlantScreen() {
   return (
         /* #1E2923 ez a szín jólnézne ki hátttérnek */
     <SafeAreaView style={{flex:1,backgroundColor:'lightgrey' , width:'100%', alignItems:'center'}}>
-        <View>
+        <View style={{flex:1,backgroundColor:'lightgrey',width:'100%'}}>
         <Button title='<My plants' onPress={()=> navigation.navigate('Home')}></Button>
         <Text style={{margin:20,fontSize:60, fontWeight:'bold', color:'black', marginBottom:-30}}>Fikusz</Text>
         <View style={{flexDirection:'row',zIndex:2, width:'100%', justifyContent:'space-around', marginTop:20}}>
-            <View style={{width:120, height:400,marginVertical:30, borderRadius:20}}>
-                <View style={{ height:'120%', width:'120%', position:'absolute'}}>
+            <View style={{width:120, height:400,marginVertical:0, borderRadius:20}}>
+                <View style={{ height:'120%', width:'120%'}}>
                     <Image source={require('../assets/plant.png')} style={{flex:1,width:300,resizeMode:'cover'}}/>
                 </View>
             </View>
-         
-            <View style={{marginLeft:120,width:200, height:400, justifyContent:'center', alignItems:'center'}}>
+         <View style={{marginLeft:120,width:200, height:400, justifyContent:'center', alignItems:'center'}}>
+          <Text>Hőmérséklet</Text>
+          <Text>25C</Text>
+          <Text>Fény</Text>
+          <Text>50%</Text>
+         </View>
+           {/*  <View style={{marginLeft:120,width:200, height:400, justifyContent:'center', alignItems:'center'}}>
                 <View style={{backgroundColor:'#FDFFAB', width:130, height:100,margin:10, borderRadius:20}}>
                 <ProgressChart style={{marginHorizontal:-120, marginVertical:-10}}
                 data={water}
@@ -87,7 +92,7 @@ export default function PlantScreen() {
                 
                 />
                 </View>
-            </View>
+            </View> */}
         </View>
 
         <View style={{backgroundColor:'white', zIndex:1, flex:1 ,marginVertical:-70, borderRadius:80}}>
