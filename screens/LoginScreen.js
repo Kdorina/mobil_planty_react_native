@@ -4,7 +4,6 @@ import { StyleSheet, View, Text, StatusBar } from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
-import { Linking } from 'react-native';
 /* import { useFonts } from 'react-native-google-fonts'; */
 
 export default function LoginScreen() {

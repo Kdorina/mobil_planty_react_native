@@ -59,19 +59,19 @@ export default function ProfileScreen() {
     </View>
               
 
-      <View style={{width:'80%', marginTop:10}}>
-          <View style={{flexDirection:"row", alignItems:'center', backgroundColor:"#DBFFAD", borderRadius:10, marginBottom:10}}>
-            <View style={{backgroundColor:'#a9e048',borderRadius:'10%',margin:10,width:40,height:40}}></View>
+      <View style={{width:'80%', marginTop:20}}>
+          <View style={{flexDirection:"row", alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
+            <View style={{backgroundColor:'#9EB23B',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
 
-          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#DBFFAD", borderRadius:10, marginBottom:10}}>
-             <View style={{backgroundColor:'#a9e048',borderRadius:'10%',margin:10,width:40,height:40}}></View>
+          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
+             <View style={{backgroundColor:'#9EB23B',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
 
-          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#DBFFAD", borderRadius:10, marginBottom:10}}>
-            <View style={{backgroundColor:'#a9e048',borderRadius:'10%',margin:10,width:40,height:40}}></View>
+          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
+            <View style={{backgroundColor:'#9EB23B',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
       </View>
