@@ -62,7 +62,7 @@ export default function ProfileScreen() {
       <View style={{width:'80%', marginTop:20}}>
           <View style={{flexDirection:"row", alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
             <View style={{backgroundColor:'#9EB23B',borderRadius:'10%',margin:10,width:40,height:40}}></View>
-            <Text style={styles.myplant}>Kaktusz</Text>
+            <Text style={styles.myplant}>Orchidea</Text>
           </View>
 
           <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
@@ -72,7 +72,7 @@ export default function ProfileScreen() {
 
           <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
             <View style={{backgroundColor:'#9EB23B',borderRadius:'10%',margin:10,width:40,height:40}}></View>
-            <Text style={styles.myplant}>Kaktusz</Text>
+            <Text style={styles.myplant}>Fikusz</Text>
           </View>
       </View>
       <View style={{alignItems:'center', marginTop:30}}>
@@ -108,6 +108,10 @@ const styles = StyleSheet.create({
     marginBottom:20,
     fontWeight:"bold",
     fontSize:35,
+  },
+  myplant:{
+    fontWeight:'500',
+    fontSize:15
   },
 
 });
