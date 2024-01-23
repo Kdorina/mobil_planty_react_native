@@ -1,13 +1,13 @@
-# Planty IOS Mobil Alkalmazás
-## Stástusz: fejleszés alatt
-
 > [!NOTE]
-> Applikáció IOS rendszerre lett tervezve.
+> Az applikáció IOS rendszerre lett tervezve.
 
-> Projekt megtekintésének lépései
- ```
-git clone {url}
-megnyitás VS code-ban
-npm install
-npx expo start (=> press i)
-```
+# Planty IOS Mobil Alkalmazás 📱🌱
+> Státusz: fejleszés alatt
+
+### Projekt megtekintésének lépései
+
+* git clone {url}
+* megnyitás VS code-ban
+* terminál => npm install
+* npx expo start (=> press i)
+
