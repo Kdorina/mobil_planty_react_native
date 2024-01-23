@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faDroplet, faSun, faTemperature0, faTemperature1, faTemperature3, faTemperature4, faTemperatureArrowDown } from '@fortawesome/free-solid-svg-icons';
 import ProgressCircle from 'react-native-progress-circle'
 import { faPagelines } from '@fortawesome/free-brands-svg-icons';
+import BottomNavigation from '../navigation/BottomNavigation';
 
   const screenWidth = Dimensions.get("window").width;
   const chartConfig = {
@@ -101,13 +102,13 @@ export default function PlantScreen() {
 
         <View style={{backgroundColor:'white', zIndex:1, flex:1 ,marginVertical:-70, borderRadius:80}}>
             <View style={{flex:1,flexDirection:'column', alignItems:'center', marginTop:80}}>
-              <View style={{backgroundColor:'#f7f7f7', width:'80%', padding:20, borderRadius:15, marginBottom:10, flexDirection:'row',alignItems:'center', justifyContent:''}}>
+              <View style={{backgroundColor:'#fafafa', width:'80%', padding:20, borderRadius:25, marginBottom:10, flexDirection:'row',alignItems:'center', justifyContent:''}}>
                 <ProgressCircle
                   percent={60}
                   radius={40}
                   borderWidth={5}
                   color="#B7E5DD"
-                  shadowColor="#999"
+                  shadowColor="#E5E1DA"
                   bgColor="#f7f7f7"
                 >
                   <Text style={{ fontSize: 18 }}>{'60%'}</Text>
@@ -115,23 +116,26 @@ export default function PlantScreen() {
                   <Text style={{fontSize:20,  marginLeft:'15%'}}><FontAwesomeIcon size={20} icon={faDroplet}/> Hidratáltság</Text>
               </View>
 
-              <View  style={{backgroundColor:'#f7f7f7', width:'80%', padding:20, borderRadius:15, marginBottom:10,flexDirection:'row', alignItems:'center' , justifyContent:'',}}>
+              <View  style={{backgroundColor:'#fafafa', width:'80%', padding:20, borderRadius:25, marginBottom:10,flexDirection:'row', alignItems:'center' , justifyContent:'',}}>
                 <ProgressCircle
                     percent={30}
                     radius={40}
                     borderWidth={5}
                     color="#B6E388"
-                    shadowColor="#999"
+                    shadowColor="#E5E1DA"
                     bgColor="#f7f7f7"
                   >
                     <Text style={{ fontSize: 18 }}>{'30%'}</Text>
                   </ProgressCircle>
                   <Text style={{fontSize:20,marginLeft:'15%'}}><FontAwesomeIcon size={20} icon={faPagelines}/> Tápanyag</Text>
               </View>
+              <BottomNavigation/>
             </View>
+          
         </View>
-
+        
         </View>
+    
      </SafeAreaView>
   )
 }

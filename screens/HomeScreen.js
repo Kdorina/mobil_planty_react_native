@@ -1,9 +1,11 @@
-import {StyleSheet, View, Text, StatusBar, Button, SafeAreaView, FlatList, Image, TouchableOpacity, ScrollView, KeyboardAvoidingView, TextInput, Keyboard } from 'react-native'
+import {StyleSheet, View, Text, StatusBar, Button, SafeAreaView, FlatList, Image, TouchableOpacity, ScrollView, KeyboardAvoidingView, TextInput, Keyboard, Alert } from 'react-native'
 import React , {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import BottomNavigation from '../navigation/BottomNavigation';
 import ToDo from '../components/ToDo';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faBell, faBellConcierge, faBellSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Plants = [
     {
@@ -33,22 +35,6 @@ const Plants = [
 
 export default function HomeScreen() {
 
-  const [task, setTask] = useState();
-  const [taskItems, setTaskItems] = useState([]);
-
-  const handleAddTask = () => {
-    Keyboard.dismiss();
-    setTaskItems([...taskItems, task])
-    setTask(null);
-  }
-
-  const completeTask = (index) => {
-    let itemsCopy = [...taskItems];
-    itemsCopy.splice(index, 1);
-    setTaskItems(itemsCopy);
-  }
-
-
   const navigation = useNavigation()
   return (
     <SafeAreaView style={styles.container}>
@@ -56,7 +42,7 @@ export default function HomeScreen() {
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
       <Text style={{fontSize:40, fontWeight:'bold'}}>My Plants</Text>
       <TouchableOpacity onPress={()=> navigation.navigate('Profile')}>
-        <View style={{backgroundColor:'#FFCF81',borderRadius:'50%'}}>
+        <View style={{backgroundColor:'#9EB23B',borderRadius:'50%'}}>
         <Text style={{width:60,height:60}}></Text>
         </View>
       </TouchableOpacity>
@@ -71,38 +57,52 @@ export default function HomeScreen() {
 
         </View>
 
-        {/* todo lista */}
-          <Text style={styles.sectionTitle}>ToDo listám</Text>
-         <ScrollView style={{backgroundColor:'#ff7919', borderRadius:20}} contentContainer={{ flexGrow: 1}} 
-          keyboardTaps='handle'>
+          <View>
+            <Text style={{fontSize:30, fontWeight:'bold'}}><FontAwesomeIcon size={30} icon={faBell} color='#9EB23B'/> Alerts</Text>
+            <View style={{margin:10}}>
+              <View style={{backgroundColor:'#f7f7f7', width:'100%',
+                padding:30, borderRadius:15,
+                marginBottom:10,flexDirection:'column', 
+                shadowColor: "#B3E283", shadowOpacity:  0.49,
+                shadowOffset: {
+                  width: 0,
+                  height: 4,
+                }, 
+                shadowRadius: 5.62, 
+                elevation: 6}}>
+                <Text style={{fontSize:20, fontWeight:'700'}}>Orchidea</Text>
+                <Text style={{fontSize:15}}>Elmaradt öntözés 10 napja</Text>
+              </View>
+              
+              <View style={{backgroundColor:'#f7f7f7', width:'100%',
+                padding:30, borderRadius:15,
+                marginBottom:10,flexDirection:'column', 
+                shadowColor: "#B3E283", shadowOpacity:  0.49,
+                shadowOffset: {
+                  width: 0,
+                  height: 4,
+                }, 
+                shadowRadius: 5.62, 
+                elevation: 6}}>
+                <Text style={{fontSize:20, fontWeight:'700'}}>Kaktusz</Text>
+                <Text style={{fontSize:15}}>Elmaradt öntözés 2 napja</Text>
+              </View>
 
-            <View style={styles.tasksWrapper}>
-             
-              <View style={styles.items}>
-                {
-                  taskItems.map((item, index)=>{
-                    return (
-                      <TouchableOpacity  key={index}  onPress={() => completeTask(index)}>
-                      <ToDo text={item} />
-                      </TouchableOpacity>
-                    )
-                  })
-                }
+              <View style={{backgroundColor:'#f7f7f7', width:'100%',
+                padding:30, borderRadius:15,
+                marginBottom:10,flexDirection:'column', 
+                shadowColor: "#B3E283", shadowOpacity:  0.49,
+                shadowOffset: {
+                  width: 0,
+                  height: 4,
+                }, 
+                shadowRadius: 5.62, 
+                elevation: 6}}>
+                <Text style={{fontSize:20, fontWeight:'700'}}>Fikusz</Text>
+                <Text style={{fontSize:15}}>Elmaradt öntözés 4 napja</Text>
               </View>
             </View>
-
-          </ScrollView>
-
-          <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"}
-            style={styles.writeListWrapper}>
-              <TextInput style={styles.input} placeholder={'Teendőim...'} value={task} onChangeText={text =>setTask(text)} />
-              <TouchableOpacity onPress={() => handleAddTask()}>
-                <View style={styles.addWrapper}>
-                  <Text style={styles.addText}>+</Text>
-                </View>
-              </TouchableOpacity>
-          </KeyboardAvoidingView>
-
+          </View>
     {/*   <Button title='plant' onPress={()=> navigation.navigate('Plants')}></Button> */}
       <StatusBar style="auto" />
     </View>
