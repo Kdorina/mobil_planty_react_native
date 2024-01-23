@@ -70,7 +70,7 @@ export default function ProfileScreen() {
             <Text style={styles.myplant}>Kaktusz</Text>
           </View>
 
-          <View style={{flexDirection:"row",alignItems:'center', backgroundColor:"#dbfab4", borderRadius:10, marginBottom:10}}>
+          <View style={{flexDirection:"row",alignItems:'center', borderColor:"#dbfab4", borderWidth:3, borderRadius:10, marginBottom:10}}>
             <View style={{backgroundColor:'#9EB23B',borderRadius:'10%',margin:10,width:40,height:40}}></View>
             <Text style={styles.myplant}>Fikusz</Text>
           </View>
